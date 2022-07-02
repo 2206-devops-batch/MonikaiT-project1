@@ -1,0 +1,27 @@
+<html>
+    <h1>Welcome!</h1>
+    <h2>Ready to do?</h2>
+    <h1>Let's get budgeting!!</h1>
+    <body>
+        <form action="/" method="POST">
+            Checking:
+            <input type="text" name="checking"><br>
+            Housing:
+            <input type="text" name="housing"><br>
+            Savings:
+            <input type="text" name="savings"><br>
+            Transportation:
+            <input type="text" name="transportation"><br>
+            Bills:
+            <input type="text" name="bills"><br>
+            Food:
+            <input type="text" name="food"><br>
+            Misc:
+            <input type="text" name="misc"><br>
+            <button type="submit" value="submit">Calculate</button>
+        </form>
+        {% if budget %}
+        <p>Your expences this month {{budget}}</p>
+        {% endif %}
+    </body>
+</html>
