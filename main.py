@@ -16,8 +16,8 @@ def calculate():
 		b = float(request.form.get('bills'))
 		f = float(request.form.get('food'))
 		m = float(request.form.get('misc'))
-		budget = round(c+h+s+t+b+f+m)	
-	return render_template('index.html', budget=budget)
+		budget = c-(h+s+t+b+f+m)
+	return render_template('index.html', budget=budget, c=c)
 	
 @app.route('/about/')
 def about():
