@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 from flask import Flask, render_template, request
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
 
 app = Flask(__name__)
 
 @app.route('/',methods = ['POST','GET'])
 def calculate():
 	budget = ''
+	income = ''
 	if request.method=='POST' and 'checking' in request.form and 'housing' in request.form and 'savings' in request.form and 'transportation' in request.form and 'bills' in request.form and 'food' in request.form and 'misc' in request.form:
 		c = float(request.form.get('checking'))
 		h = float(request.form.get('housing'))
@@ -17,7 +16,8 @@ def calculate():
 		f = float(request.form.get('food'))
 		m = float(request.form.get('misc'))
 		budget = c-(h+s+t+b+f+m)
-	return render_template('index.html', budget=budget, c=c)
+		income = c
+	return render_template('index.html', budget=budget, income=income)
 	
 @app.route('/about/')
 def about():
