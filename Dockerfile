@@ -9,7 +9,7 @@ COPY ./requirements.txt /MonikaiT-project1/requirements.txt
 RUN pip install -r requirements.txt
 
 # Copy src files
-Copy . /MonikaiT-project1
+COPY . /MonikaiT-project1
 
 # Run Server
 RUN export FLASK_APP=app.py
