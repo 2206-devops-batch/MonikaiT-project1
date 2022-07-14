@@ -6,7 +6,7 @@ pipeline {
                 sh """
                     python3 -m venv .venv
                     . .venv/Scripts/activate
-                    python3 pip install -r requirements.txt
+                    pip install -r requirements.txt
                     python3 -m pytest app-test.py
                     docker build -t mtk_project2 .
                     docker push mtk_project2
