@@ -14,7 +14,5 @@ pipeline {
                 sh 'git https://github.com/2206-devops-batch/MonikaiT-project1.git'
             }
         }
-    
-        }
     }
 }
