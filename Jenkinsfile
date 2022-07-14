@@ -14,12 +14,6 @@ pipeline {
                 sh 'git https://github.com/2206-devops-batch/MonikaiT-project1.git'
             }
         }
-        stage("run") {
-            steps{
-                sh """
-                    docker run --rm mtk_project2
-                """
-            }
-        }
+    
     }
 }
