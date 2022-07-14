@@ -1,7 +1,7 @@
 pipeline {
     agent {label "linux"}
     stages {
-        stage{"build", "test"} {
+        stage{"build"} {
             steps {
                 sh """
                     python3 -m venv .venv
