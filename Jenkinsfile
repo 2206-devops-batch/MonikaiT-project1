@@ -17,7 +17,7 @@ pipeline {
         stage("run") {
             steps{
                 sh """
-                    docker run --rm mtk_project2
+                    docker run --rm -it -memory="1g" mtk_project2
                 """
             }
         }
