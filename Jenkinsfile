@@ -22,6 +22,7 @@ pipeline {
                     docker run --rm -d mtinsonk/mtkproject2
                     docker pull jenkins/jenkins
                     docker run -p 8082:8080 --name=jenkins-master -d jenkins/jenkins
+                    docker logs -f jenkins
                     #minikube start
                     #minikube status
                 """
