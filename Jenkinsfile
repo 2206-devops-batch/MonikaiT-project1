@@ -20,7 +20,7 @@ pipeline {
                 sh """
                     docker run --rm -d mtinsonk/mtkproject2
                     docker pull jenkins/jenkins
-                    kill -9 lsof -t -i tcp:<8080>
+                    kill -9 lsof -t -i tcp:8080
                     docker run -p 8080:8080 --name=jenkins-master -d jenkins/jenkins
                     #docker run --name=jenkins-master -p 8080:8080 -p 50000:50000 -v /var/jenkins_home -d jenkins/jenkins
                 """
