@@ -23,7 +23,7 @@ pipeline {
             }
         }
         stage("cluster") {
-            agent {label 'linuxdeploy'}
+            agent {label 'linux'}
             steps {
                 sh """
                     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
