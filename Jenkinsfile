@@ -20,8 +20,8 @@ pipeline {
                 sh """
                     docker run --rm -d mtinsonk/mtkproject2
                     docker pull jenkins/jenkins
-                    docker run -p 8082:8080 --name=jenkins-master -d jenkins/jenkins
-                    #docker run --name=jenkins-master -p 8080:8080 -p 50000:50000 -v /var/jenkins_home -d jenkins/jenkins
+                    #docker run -p 8082:8080 --name=jenkins-master -d jenkins/jenkins
+                    docker run -d --name=jenkins-master -p 8082:8080 -p 50000:50000 -v jenkins date:/var/jenkins_home jenkins/jenkins:lts
                 """
             }
         }
