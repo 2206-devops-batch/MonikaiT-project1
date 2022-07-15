@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh """
                     docker run --rm -d mtinsonk/mtkproject2
-                    docker run -d --name jenkins -p 8080:8080 -v jenkins data:/var/jenkins_home jenkins/jenkins:lts
+                    docker run -d --name jenkins -p 8080:8080 jenkins data:/var/jenkins_home jenkins/jenkins:lts
                 """
             }
         }
