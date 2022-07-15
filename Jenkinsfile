@@ -22,14 +22,6 @@ pipeline {
                 """
             }
         }
-#       stage("cluster") {
-#           agent {label 'linux'}
-#           steps {
-#               sh 
-#                   
-#                
-#           }
-#      }
     }
 }
 
