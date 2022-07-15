@@ -12,10 +12,6 @@ pipeline {
                     docker build . -t mtinsonk/mtkproject2
                     docker login --username=mtinsonk --password=Mauria1234
                     docker push mtinsonk/mtkproject2
-                """
-            }
-            stage("run") {
-                sh """
                     docker run -rm mtinson/mtkproject2
                 """
             }
