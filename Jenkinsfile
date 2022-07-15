@@ -22,20 +22,14 @@ pipeline {
                 """
             }
         }
-        stage("cluster") {
-            agent {label 'linux'}
-            steps {
-                sh """
-                    snap install kubectl --classic
-                    kubectl version --client
-                    minikube start
-                    minikube status
-                    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-                    chmod 700 get_helm.sh
-                    ./get_helm.sh
-                """
-            }
-        }
+#       stage("cluster") {
+#           agent {label 'linux'}
+#           steps {
+#               sh 
+#                   
+#                
+#           }
+#      }
     }
 }
 
