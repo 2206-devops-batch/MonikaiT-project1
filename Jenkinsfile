@@ -16,7 +16,7 @@ pipeline {
         stage("run") {
             steps {
                 sh """
-                    docker run -rm mtinsonk/mtkproject2
+                    docker run --rm mtinsonk/mtkproject2
                 """
             }
         }
