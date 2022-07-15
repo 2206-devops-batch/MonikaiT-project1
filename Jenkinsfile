@@ -21,7 +21,7 @@ pipeline {
                     docker run --rm -d mtinsonk/mtkproject2
                     docker pull jenkins/jenkins
 
-                    docker run --name=jenkins-master -p 8080:8080 -p 50000:50000 -v jenkins data:/var/jenkins_home -d jenkins/jenkins:lts
+                    docker run --name=jenkins-master -p 8080:8080 -p 50000:50000 -v jenkins data:/var/jenkins_home -d jenkins/jenkins
                 """
             }
         }
