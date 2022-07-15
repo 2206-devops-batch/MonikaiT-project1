@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages {
         stage("build") {
-            steps {
+            steps 
+                git 'https://github.com/2206-devops-batch/MonikaiT-project1.git'
+
                 sh """
                     python3 -m venv .venv
                     pip3 install -r requirements.txt
@@ -11,7 +13,11 @@ pipeline {
                     docker login --username=mtinsonk --password=Mauria1234
                     docker push mtinsonk/mtkproject2
                 """
-                sh 'git https://github.com/2206-devops-batch/MonikaiT-project1.git'
+            }
+            stage("run") {
+                sh """
+                    docker run -rm mtinson/mtkproject2
+                """
             }
         }
     }
