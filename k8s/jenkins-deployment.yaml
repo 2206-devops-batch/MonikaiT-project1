@@ -16,7 +16,7 @@ spec:
       - name: jenkins
         image: mtinsonk/mtkproject2
         env:
-      - name: JAVA_OPTS
+      - name: java_opts
         value: -Djenkins.install.runSetupWizard=false
         ports:
           - name: http-ports
