@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        compnent: server
+        component: server
       spec:
         containers:
           - name: server

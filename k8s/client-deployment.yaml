@@ -4,16 +4,19 @@ metadata:
   name: client-deployment
 spec:
   replicas: 1
-  selector:
-    matchLAbels:
-      component: web
   template:
     metadata:
       labels:
-        compnent: web
+        component: web
       spec:
         containers:
           - name: jenkins
             image: mtinsonk/mtkproject2
+            env:
+              - name: JAVA_OPTS
+                value: -Djenkins.install.runSetupWizard=false
             ports:
-              - containerPort: 8080
+              - name: http-ports
+                  containerPort: 8080
+              - name: agent-port
+                  contaninerPort: 50000
