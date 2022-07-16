@@ -22,4 +22,4 @@ spec:
           - name: http-ports
             containerPort: 8080
           - name: agent-port
-            contaninerPort: 50000
+            containerPort: 50000
