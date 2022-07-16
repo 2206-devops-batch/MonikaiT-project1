@@ -11,10 +11,10 @@ spec:
       spec:
         containers:
           - name: jenkins
-              image: mtinsonk/mtkproject2
-              env:
-                - name: JAVA_OPTS
-                  value: -Djenkins.install.runSetupWizard=false
+            image: mtinsonk/mtkproject2
+            env:
+              - name: JAVA_OPTS
+                value: -Djenkins.install.runSetupWizard=false
             ports:
               - name: http-ports
                   containerPort: 8080
