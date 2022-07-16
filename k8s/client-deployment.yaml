@@ -17,6 +17,6 @@ spec:
                 value: -Djenkins.install.runSetupWizard=false
             ports:
               - name: http-ports
-                  - containerPort: 8080
+                - containerPort: 8080
               - name: agent-port
-                  - contaninerPort: 50000
+                - contaninerPort: 50000
