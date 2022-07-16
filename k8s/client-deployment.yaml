@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: client-deployment
+  name: jenkins
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        component: web
+        app: jenkins
       spec:
         containers:
           - name: jenkins
-            image: mtinsonk/mtkproject2
-            env:
-              - name: JAVA_OPTS
-                value: -Djenkins.install.runSetupWizard=false
+              image: mtinsonk/mtkproject2
+              env:
+                - name: JAVA_OPTS
+                  value: -Djenkins.install.runSetupWizard=false
             ports:
               - name: http-ports
                   containerPort: 8080
