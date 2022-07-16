@@ -9,7 +9,8 @@ pipeline {
                     python3 -m pytest app-test.py
                     docker image prune -af
                     docker system prune -af
-                    docker rm -fv \$(docker ps -aq)
+                    #docker rm -fv \$(docker ps -aq)
+                    docker container prune
                     docker build . -t mtinsonk/mtkproject2
                     docker login --username=mtinsonk --password=Mauria1234
                     docker push mtinsonk/mtkproject2
