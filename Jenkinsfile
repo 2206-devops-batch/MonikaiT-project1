@@ -15,10 +15,16 @@ pipeline {
                     docker login --username=mtinsonk --password=Mauria1234
                     docker push mtinsonk/mtkproject2
                     docker push mtinsonk/server-mtkproject2
-                    kubectl apply file
                 """
             }
         }
+       /*  node {
+  stage('Apply Kubernetes files') {
+    withKubeConfig([credentialsId: 'user1', serverUrl: ''https://192.168.49.2:8443'']) {
+      sh 'kubectl apply -f my-kubernetes-directory'
+    }
+  } */
+}
     }
 }
 
