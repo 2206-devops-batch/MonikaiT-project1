@@ -13,8 +13,8 @@ spec:
         app: jenkins
     spec:
       containers:
-      - name: jenkins
-        image: mtinsonk/mtkproject2
+      - image: mtinsonk/mtkproject2
+        name: jenkins
         env:
       - name: java_opts
         value: -Djenkins.install.runSetupWizard=false
