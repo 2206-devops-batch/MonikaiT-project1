@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLAbels:
+      component: web
+  template:
+    metadata:
+      labels:
+        compnent: web
+      spec:
+        containers:
+          - name: jenkins
+            image: mtinsonk/mtkproject2
+            ports:
+              - containerPort: 8080

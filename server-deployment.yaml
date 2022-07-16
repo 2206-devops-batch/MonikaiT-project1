@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLAbels:
+      component: server
+  template:
+    metadata:
+      labels:
+        compnent: server
+      spec:
+        containers:
+          - name: server
+            image: mtinsonk/server-mtkproject2
+            ports:
+              - containerPort: 5000

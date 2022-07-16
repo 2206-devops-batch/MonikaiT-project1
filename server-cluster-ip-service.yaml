@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metada:
+  name: server-cluster-ip-service
+spec:
+  type: NodePort
+  selector:
+    component: server
+  ports:
+    - port: 5000
+      targetport: 5000
+      #use only in development
+      nodePort: 81516
