@@ -16,10 +16,10 @@ spec:
       - image: mtinsonk/mtkproject2
         name: jenkins
         env:
-      - name: java_opts
-        value: -Djenkins.install.runSetupWizard=false
-        ports:
-          - name: http-ports
-            containerPort: 8080
-          - name: agent-port
-            containerPort: 50000
+        - name: JAVA_OPTS
+          value: -Djenkins.install.runSetupWizard=false
+          ports:
+            - name: http-ports
+              containerPort: 8080
+            - name: agent-port
+              containerPort: 50000
