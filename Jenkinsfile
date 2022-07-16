@@ -4,7 +4,7 @@ pipeline {
         stage("build") {
             steps {
                 sh """
-                    pip install python3.10-venv
+                    install python3.10-venv
                     python3 -m venv .venv
                     pip3 install -r requirements.txt
                     python3 -m pytest app-test.py
