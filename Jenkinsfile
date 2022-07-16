@@ -18,13 +18,7 @@ pipeline {
                 """
             }
         }
-       /*  node {
-  stage('Apply Kubernetes files') {
-    withKubeConfig([credentialsId: 'user1', serverUrl: ''https://192.168.49.2:8443'']) {
-      sh 'kubectl apply -f my-kubernetes-directory'
-    }
-  } */
-}
     }
 }
+
 
