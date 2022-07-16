@@ -23,7 +23,6 @@ pipeline {
                     docker pull jenkins/jenkins
                     docker run -p 8082:8080 --name=jenkins-master -d jenkins/jenkins
                     #minikube start
-                    #minikube status
                 """
             }
         }
