@@ -8,7 +8,6 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 5000
-      targetport: 5000
-      #use only in development
-      nodePort: 81516
+      port: 8081
+      targetport: 80
+      #use only in development.
