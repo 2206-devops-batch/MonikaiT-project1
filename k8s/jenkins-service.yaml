@@ -9,6 +9,6 @@ spec:
   ports:
     - protocol: TCP
       port: 5000
-      targetport: 80
+      targetport: 5000
       #use only in development
       nodePort: 81516
