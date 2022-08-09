@@ -23,7 +23,7 @@ pipeline {
                     docker build . -t mtinsonk/mtkproject2
                     docker build . -t mtinsonk/server-mtkproject2
                     docker build . -t mtinsonk/jenkins-mtkproject2
-                    docker login --username=mtinsonk --password=Mauria1234
+#                    docker login --username=mtinsonk --password=Mauria1234
                     docker push mtinsonk/mtkproject2
                     docker push mtinsonk/server-mtkproject2
                     docker push mtinsonk/jenkins-mtkproject2
