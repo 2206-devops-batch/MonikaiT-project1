@@ -1,6 +1,14 @@
 pipeline {
+     environment { 
+        registry = "mtinsonk/mtkproject2"
+        registtryCredential = 'mtinsonk'
+        dockerImage = 'mtinsonk/mtkproject2' 
+    }
     agent any
     stages {
+        stage('Cloning our Git') { 
+            steps { 
+                git 'https://github.com/2206-devops-batch/MonikaiT-project1.git'
         stage("build") {
             steps {
                 sh """
