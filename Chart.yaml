@@ -1,0 +1,7 @@
+apiVersion: v2
+name: Order-pkadmin
+description: A Helm chart for pipeline order.
+type: application
+version: 0.1.0
+apVersion: 1.11.0
+
