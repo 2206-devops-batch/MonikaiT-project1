@@ -13,7 +13,7 @@ COPY . /MonikaiT-project1/
 
 # Run Server
 RUN export FLASK_APP=app.py
-RUN export FLASK_ENV=deployment
-
+RUN export FLASK_ENV=development
+RUN flask run
 
 CMD ["flask", "run", "--host=0.0.0.0"]
