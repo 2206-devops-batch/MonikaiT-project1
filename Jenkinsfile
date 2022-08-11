@@ -20,13 +20,13 @@ pipeline {
                     docker image prune -af
                     docker system prune -af
                     docker container prune -f
-                    docker build -t -d mtinsonk/mtkproject2:latest .
+                    docker build . -t mtinsonk/mtkproject2:latest
                     docker build . -t mtinsonk/server-mtkproject2
                     docker build . -t mtinsonk/jenkins-mtkproject2
                     docker push mtinsonk/mtkproject2
                     docker push mtinsonk/server-mtkproject2
                     docker push mtinsonk/jenkins-mtkproject2
-                    docker run -p 5000:5000 mtinsonk/mtkproject2:latest
+                    docker run -d -p 5000:5000 mtinsonk/mtkproject2:latest
                 """
             }
         }
