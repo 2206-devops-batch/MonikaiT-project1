@@ -26,7 +26,7 @@ pipeline {
                     docker push mtinsonk/mtkproject2
                     docker push mtinsonk/server-mtkproject2
                     docker push mtinsonk/jenkins-mtkproject2
-                    docker run -d -p 8000:8000 mtinsonk/mtkproject2:latest
+                    docker run -d -p 5000:5000 mtinsonk/mtkproject2:latest
                 """
             }
         }
