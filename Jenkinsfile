@@ -20,7 +20,7 @@ pipeline {
                     docker image prune -af
                     docker system prune -af
                     docker container prune -f
-                    docker build . -t -d mtinsonk/mtkproject2:latest
+                    docker build -t -d mtinsonk/mtkproject2:latest .
                     docker build . -t mtinsonk/server-mtkproject2
                     docker build . -t mtinsonk/jenkins-mtkproject2
                     docker push mtinsonk/mtkproject2
