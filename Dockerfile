@@ -15,4 +15,4 @@ COPY . /MonikaiT-project1/
 RUN export FLASK_APP=app.py
 RUN export FLASK_ENV=development
 
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0"]
